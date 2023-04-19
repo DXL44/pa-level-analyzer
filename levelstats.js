@@ -21,7 +21,6 @@ function storeLevel(){
     fileReader.onload = function() {
         document.getElementById('storage').innerHTML = fileReader.result
         //yeah, im storing it like that. you have full permission to mock me for this. i couldnt get anything else to work :(
-        document.getElementById('LoadButton').innerHTML = "LOAD level"
         }; 
     fileReader.onerror = function() {
           alert(fileReader.error);
@@ -33,7 +32,8 @@ function loadLevel() {
         console.log("oops don't do that")
         return
     } else {
+        console.log("doing it...");
+        levelJSON = JSON.parse(JSON.stringify(inputLevel));
         console.log("good job you did it");
-        inputLevel = JSON.parse(inputLevel);
     }
 }
