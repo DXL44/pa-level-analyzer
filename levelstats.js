@@ -12,15 +12,14 @@
 //for (let i = 0; i < inputThings.length; i++) {
 //  inputThings[i].style.display = "none";
 //}
-
+let inputLevel  = null
 function storeLevel(){
-    input = document.getElementById('levelupload');
+    inputLevel = document.getElementById('levelupload');
     let file = input.files[0]; 
     let fileReader = new FileReader(); 
     fileReader.readAsText(file); 
     fileReader.onload = function() {
-        document.getElementById('storage').innerHTML = fileReader.result
-        //yeah, im storing it like that. you have full permission to mock me for this. i couldnt get anything else to work :(
+        theRealLevel = fileReader.result
         }; 
     fileReader.onerror = function() {
           alert(fileReader.error);
@@ -28,7 +27,7 @@ function storeLevel(){
 }
 function loadLevel() {
     inputLevel = document.getElementById('storage').innerHTML 
-    if (inputLevel == ""){
+    if (inputLevel == null){
         console.log("oops don't do that")
         return
     } else {
