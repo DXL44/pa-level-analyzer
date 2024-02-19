@@ -25,9 +25,9 @@
 <body>
 <div id="maintitle">
 <span id="smalltext">PROJECT ARRHYTHMIA</span><br>
-<span id="bigtext">LEVEL ANALYZER</span>
+<span id="bigtext"><s>LEVEL ANALYZER</s> ALPHA TEXT FIXER</span>
 </div>
-<p>Upload a level file (.lsb) to get some fun stats about your hard work!</p>
+<p>Upload an alpha level file (.vgd) to automatically make all text use the original Inconsolata font! This will eventually be a full-on level analyzer, but currently does just this because some people really need it.</p>
 <!--load a level
 <input type="file"
        id=";lstupload" name="lstupload" accept=".lst">-->
@@ -35,8 +35,8 @@
 </span>
 <!--<canvas id="levelPreview" witdh="750" height="100"></canvas>-->
 <p id="levelNotice"></p>
-<input class="hideOnLoad" type="file" accept=".vgd, .lsb" id="levelupload" onChange="storeLevel()">
-<button class="hideOnLoad" id="LoadButton" onClick="loadLevel()">LOAD LEVEL</button>
+<input class="hideOnLoad" type="file" accept=".vgd" id="levelupload" onChange="storeLevel()">
+<button class="hideOnLoad" id="LoadButton" onClick="loadLevel()">DO THE THING</button>
 <p id="infotest"></p>
 <div style="height:500px;"><canvas id="chartObjs" style="width:100%;max-width:600px;display:none;"></canvas></div>
 
